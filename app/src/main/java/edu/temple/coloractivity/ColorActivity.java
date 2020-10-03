@@ -21,7 +21,6 @@ public class ColorActivity extends AppCompatActivity {
     Spinner pnSpinner; // my spinner object
     ArrayList<String> pnColors; // my Array List (Integer) object
     ConstraintLayout pnLayout; // my layout
-    Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +31,6 @@ public class ColorActivity extends AppCompatActivity {
         pnSpinner = findViewById(R.id.pnSpinner);
         bgTextView = findViewById(R.id.bgTextView);
         pnLayout = (ConstraintLayout)findViewById(R.id.layout);
-        this.context = getApplicationContext();
 
         // make sure views are found in log, if not found, will display false
         Log.d("ColorActivity", "pnSpinner was found " + (pnSpinner != null));

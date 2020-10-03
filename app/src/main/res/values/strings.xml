@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">ColorActivity</string>
+    <string-array name="pnColors">
+        <item>Choose a Color</item>
+        <item>Green</item>
+        <item>Blue</item>
+        <item>Black</item>
+        <item>Red</item>
+        <item>Dark Gray</item>
+        <item>Gray</item>
+        <item>Yellow</item>
+        <item>Magenta</item>
+        <item>Cyan</item>
+        <item>Light Gray</item>
+    </string-array>
+</resources>

@@ -3,18 +3,11 @@ package edu.temple.coloractivity;
 import android.content.Context;
 import android.graphics.Color;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
-
-import androidx.constraintlayout.widget.ConstraintLayout;
-
-import org.w3c.dom.Text;
-
 import java.util.ArrayList;
 
 // 2. Created ColorAdapter that extends BaseAdapter to present set of color options
@@ -23,6 +16,7 @@ public class ColorAdapter extends BaseAdapter {
     Context context; //context object for adapter reference
     ArrayList<String> pnColors; // array of strings object
     Spinner pnSpinner;
+    TextView bgTextView;
     // Ex. ArrayList<String> PN <- just an independent object from same class, can be any name
 
     // constructor
@@ -83,15 +77,12 @@ public class ColorAdapter extends BaseAdapter {
         }
         else
             bgTextView = (TextView) convertView;
-
             bgTextView.setText(getItem(position).toString()); // get text from position
             bgTextView.setBackgroundColor(Color.WHITE); // spinner bg (WHITE)
             bgTextView.setTextColor(pnColors[position % pnColors.length]);
 
-
         return bgTextView;
     }
-
 
     @Override
     public View getDropDownView(int position, View convertView, ViewGroup parent) {
@@ -103,4 +94,5 @@ public class ColorAdapter extends BaseAdapter {
 
         return v;
     }
+
 }
